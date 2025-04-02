@@ -23,25 +23,19 @@ Prevents XSS Attacks: JSX escapes values before rendering.
 
 ✅ Embedding JavaScript in JSX
 
-jsx
-Copy
-Edit
 const name = "Saad";
 const element = <h1>Hello, {name}!</h1>; 
 ✅ JSX Supports Expressions, Not Statements
 This works:
 
-jsx
-Copy
-Edit
 const age = 20;
 const message = <p>{age > 18 ? "Adult" : "Minor"}</p>;
 This doesn't (because if is a statement, not an expression):
 
-jsx
-Copy
-Edit
+
 const message = <p>{if (age > 18) "Adult"}</p>; ❌
+
+
 2️⃣ Components in React
 React is component-based, meaning UI is broken into small, reusable pieces.
 
@@ -50,17 +44,13 @@ Types of Components
 
 Simple JavaScript functions that return JSX.
 
-jsx
-Copy
-Edit
+
 function Greeting() {
   return <h1>Hello, Saad!</h1>;
 }
 ✅ 2. Class Components (Older React, Uses Lifecycle Methods)
 
-jsx
-Copy
-Edit
+
 class Greeting extends React.Component {
   render() {
     return <h1>Hello, Saad!</h1>;
@@ -70,9 +60,6 @@ class Greeting extends React.Component {
 
 ✅ Rendering a Component in React
 
-jsx
-Copy
-Edit
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -81,6 +68,8 @@ function Welcome() {
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(<Welcome />);
+
+
 3️⃣ Props (Passing Data to Components)
 Props (short for properties) allow you to pass data from parent to child components.
 
